@@ -6,7 +6,7 @@ namespace Marussia\JsonFileLoader;
 
 use Marussia\JsonFileLoader\Exceptions\InvalidJsonException;
 
-class JsonFileLoader extends FileLoader
+class JsonFileLoader
 {
     public static function load(string $resource)
     {
