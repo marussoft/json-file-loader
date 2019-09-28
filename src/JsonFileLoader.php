@@ -1,6 +1,6 @@
 <?php
 
-declare(stric_types=1);
+declare(strict_types=1);
 
 namespace Marussia\JsonFileLoader;
 
@@ -10,18 +10,18 @@ class JsonFileLoader
 {
     public static function load(string $resource)
     {
-        $messages = [];
-        
+        $content = [];
+
         $data = file_get_contents($resource);
-        
+
         if ($data !== false) {
-            $messages = json_decode($data, true);
+            $content = json_decode($data, true);
             $errorCode = json_last_error();
             if ($errorCode > 0) {
-                throw new InvalidJsonException($errorCode);
+                throw new InvalidJsonException($resource, $errorCode);
             }
         }
-        
-        return $messages;
+
+        return $content;
     }
 }
