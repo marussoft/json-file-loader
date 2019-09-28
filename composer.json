@@ -1,0 +1,28 @@
+{
+    "name": "marussia/json-file-loader",
+    "type": "library",
+    "description": "Marussia json-file-loader",
+    "license": "MIT",
+    "keywords": [
+        "json-file-loader"
+    ],
+    "authors": [
+        {
+            "name": "Mikhail Ilinsky",
+            "email": "mail@milinsky.ru"
+        }
+    ],
+    "support": {
+        "docs": "https://docs.marussia.org/json-file-loader/"
+    },
+    "require": {
+        "php": "^7.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Marussia\\JsonFileLoader\\": "src/"
+        }
+    }
+}
+
